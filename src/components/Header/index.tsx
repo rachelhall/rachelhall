@@ -12,6 +12,7 @@ import cats from "../../media/cats.jpeg";
 import "./styles.scss";
 import { useModal } from "../../utils/useModal";
 import React from "react";
+import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
 
 interface IProps {}
 
@@ -20,7 +21,8 @@ export const Header: React.FC<IProps> = () => {
     heading: "Cats",
     content: (
       <div>
-        <img src={cats} height="200" alt="3 cats looking out the window" />
+        Coming soon...
+        {/* <img src={cats} height="200" alt="3 cats looking out the window" /> */}
       </div>
     ),
   });
@@ -29,6 +31,8 @@ export const Header: React.FC<IProps> = () => {
     e.preventDefault();
     handleModal();
   };
+
+  const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
   return (
     <div className="header" id="header">
       <Nav pages={pages}></Nav>
@@ -78,7 +82,7 @@ export const Header: React.FC<IProps> = () => {
         <div>
           <Avatar src={rachel} />
           <div className="header--bio">
-            <Text verticalSpacing="large">
+            <Text verticalSpacing={isMobile ? "small" : "large"}>
               I'm a musician turned software engineer, specialzing in React.js.
               I love writing clean reusable code that's well-organized and easy
               to maintain. Some of my favorite tools include Typescript,
