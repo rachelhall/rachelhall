@@ -1,8 +1,11 @@
 .portfolio--items {
-  display: flex;
-  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 
   & > * {
-    margin: 0 1rem;
+    margin: 1rem;
   }
 }

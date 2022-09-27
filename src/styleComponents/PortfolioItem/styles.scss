@@ -1,5 +1,35 @@
+.portfolioItem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  overflow-y: scroll;
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
 .portfolioItem--tools > * {
   margin-right: 0.5rem;
+  color: var(--pink);
+}
+
+.portfolioItem--link {
+  color: var(--pink);
+}
+.portfolioItem--thumbnail {
+  border: 0.5rem solid var(--pink);
+  border-radius: 0.5rem;
+  transition: box-shadow, transform 0.1s;
+  min-height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.portfolioItem--thumbnail:hover {
+  box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.51);
+  background-color: var(--pink);
+  color: var(--light-pink);
 }
 
 .portfolioItem--image {

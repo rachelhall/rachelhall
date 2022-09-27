@@ -1,9 +1,12 @@
 import { useModal } from "../../utils/useModal";
 import { Text } from "../Text";
 import { DiCss3, DiHtml5, DiJavascript, DiReact } from "react-icons/di";
-import "./styles.scss";
+import { GrGraphQl } from "react-icons/gr";
+
 import { ECodeTool } from "../../portfolioData";
 import { Link } from "../Link";
+
+import "./styles.scss";
 
 interface IProps {
   mainImage: string;
@@ -23,6 +26,10 @@ const getToolIcon = (tool: ECodeTool) => {
       return <DiJavascript fontSize="2.5rem" />;
     case ECodeTool.REACT:
       return <DiReact fontSize="2.5rem" />;
+    case ECodeTool.REACT_NATIVE:
+      return <GrGraphQl fontSize="2.5rem" />;
+    case ECodeTool.GRAPHQL:
+      return <DiReact fontSize="2.5rem" />;
   }
 };
 
@@ -37,13 +44,7 @@ export const PortfolioItem: React.FC<IProps> = ({
     heading: title,
     content: (
       <div>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            columnGap: "2rem",
-          }}
-        >
+        <div className="portfolioItem">
           <div>
             <img
               src={mainImage}
@@ -52,15 +53,19 @@ export const PortfolioItem: React.FC<IProps> = ({
               className="portfolioItem--image"
             />
 
-            <Text fontWeight="bold">Technology used:</Text>
+            <Text fontWeight="bold" color="pink">
+              Technology used:
+            </Text>
             <div className="portfolioItem--tools">
-              {tools?.map((tool) => getToolIcon(tool))}
+              {tools?.map((tool, i) => getToolIcon(tool))}
             </div>
           </div>
-          <div>
+          <div className="portfolioItem--link">
             <Text>{description}</Text>
-            <Link url={url}>
-              <Text fontWeight="bold">View site</Text>
+            <Link url={url} animation={false}>
+              <Text fontWeight="bold" color="pink">
+                View site
+              </Text>
             </Link>
           </div>
         </div>
@@ -72,7 +77,10 @@ export const PortfolioItem: React.FC<IProps> = ({
   };
   return (
     <div onClick={handleClick} className="portfolioItem--thumbnail">
-      <img height="200" src={mainImage} alt="Portfolio item" />
+      <Text fontSize="large" fontWeight="bold" textAlign="center">
+        {title}
+      </Text>
+
       {modal}
     </div>
   );

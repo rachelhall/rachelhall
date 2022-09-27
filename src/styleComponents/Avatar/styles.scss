@@ -3,6 +3,9 @@
   width: 30rem;
   overflow: hidden;
   transform: translateY(-8rem);
+  @media (max-width: 600px) {
+    display: none;
+  }
 }
 .avatar--background {
   background-color: var(--light-pink);

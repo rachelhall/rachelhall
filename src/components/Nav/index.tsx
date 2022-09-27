@@ -15,7 +15,7 @@ export const Nav: React.FC<IProps> = ({ pages }) => {
     <div>
       <ul className="nav--list">
         {pages.map((page) => (
-          <Link url={page.url}>
+          <Link key={page.title} url={page.url} external={true}>
             <li className="nav--item">{page.title}</li>
           </Link>
         ))}

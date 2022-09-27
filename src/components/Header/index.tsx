@@ -1,18 +1,34 @@
 import { pages } from "../../pages";
 import { Nav } from "../Nav";
 import { Text } from "../../styleComponents/Text";
-import { Avatar } from "../../styleComponents/Avatar";
 import rachel from "../../media/rachel.png";
-import "./styles.scss";
-
+import { Avatar } from "../../styleComponents/Avatar";
 import { BsCodeSquare, BsFileEarmarkMusic } from "react-icons/bs";
 import { GiHollowCat, GiRollerSkate } from "react-icons/gi";
 import { Link } from "../../styleComponents/Link";
 import { Contact } from "../Contact";
+import cats from "../../media/cats.jpeg";
+
+import "./styles.scss";
+import { useModal } from "../../utils/useModal";
+import React from "react";
 
 interface IProps {}
 
 export const Header: React.FC<IProps> = () => {
+  const { handleModal, modal } = useModal({
+    heading: "Cats",
+    content: (
+      <div>
+        <img src={cats} height="200" alt="3 cats looking out the window" />
+      </div>
+    ),
+  });
+
+  const handleClick = (e: React.FormEvent) => {
+    e.preventDefault();
+    handleModal();
+  };
   return (
     <div className="header" id="header">
       <Nav pages={pages}></Nav>
@@ -48,13 +64,16 @@ export const Header: React.FC<IProps> = () => {
               </>
             </Text>
           </Link>
-          <Link url="#">
-            <Text fontSize="large" uppercase fontWeight="bold">
-              <>
-                <GiHollowCat /> Cat Mom
-              </>
-            </Text>
-          </Link>
+          <div onClick={handleClick}>
+            <Link url="">
+              <Text fontSize="large" uppercase fontWeight="bold">
+                <>
+                  <GiHollowCat /> Cat Mom
+                </>
+              </Text>
+            </Link>
+          </div>
+          <Contact />
         </div>
         <div>
           <Avatar src={rachel} />
@@ -62,15 +81,15 @@ export const Header: React.FC<IProps> = () => {
             <Text verticalSpacing="large">
               I'm a musician turned software engineer, specialzing in React.js.
               I love writing clean reusable code that's well-organized and easy
-              to maintain. Some of my favorite tools to work with include
-              Typescript, Next.js, Graphql, Python and Django. Outside of work,
-              I enjoy recording music with friends and rollerblading across
-              souther California.
+              to maintain. Some of my favorite tools include Typescript,
+              Next.js, Graphql, Python and Django. Outside of work, I enjoy
+              recording music with friends and rollerblading across souther
+              California.
             </Text>
-            <Contact />
           </div>
         </div>
       </div>
+      {modal}
     </div>
   );
 };

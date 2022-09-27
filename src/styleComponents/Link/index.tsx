@@ -1,17 +1,23 @@
 import "./styles.scss";
 interface IProps {
   children?: JSX.Element | string;
-  url: string;
+  url?: string;
   external?: boolean;
+  animation?: boolean;
 }
 
-export const Link: React.FC<IProps> = ({ children, external = false, url }) => {
+export const Link: React.FC<IProps> = ({
+  animation = true,
+  children,
+  external = false,
+  url,
+}) => {
   return (
     <a
       href={url}
-      className="link"
+      className={animation ? "link" : "link--noAnimation"}
       target={external ? "_blank" : "_self"}
-      rel="noreferrer"
+      rel="noopener noreferrer"
     >
       {children}
     </a>
