@@ -1,8 +1,6 @@
 import oldschool from "./media/app.png";
 import txleaguer from "./media/tx-leaguer.png";
 import synth from "./media/synth.png";
-import { DiReact } from "react-icons/di";
-import { IconType } from "react-icons";
 
 export enum ECodeTool {
   HTML = "HTML",

@@ -1,8 +1,3 @@
-import React from "react";
-import logo from "./logo.svg";
-import { Nav } from "./components/Nav";
-import { pages } from "./pages";
-
 import "./styles/global.scss";
 import { Header } from "./components/Header";
 import { Portfolio } from "./components/Portfolio";

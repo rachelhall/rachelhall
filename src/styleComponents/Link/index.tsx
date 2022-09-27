@@ -1,4 +1,3 @@
-import { Text } from "../Text";
 import "./styles.scss";
 interface IProps {
   children?: JSX.Element | string;
