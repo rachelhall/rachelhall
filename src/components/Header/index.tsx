@@ -83,7 +83,7 @@ export const Header: React.FC<IProps> = () => {
               I love writing clean reusable code that's well-organized and easy
               to maintain. Some of my favorite tools include Typescript,
               Next.js, Graphql, Python and Django. Outside of work, I enjoy
-              recording music with friends and rollerblading across souther
+              recording music with friends and rollerblading across southern
               California.
             </Text>
           </div>
