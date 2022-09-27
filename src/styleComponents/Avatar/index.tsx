@@ -1,0 +1,13 @@
+import "./styles.scss";
+
+interface IProps {
+  src: string;
+}
+
+export const Avatar: React.FC<IProps> = ({ src }) => {
+  return (
+    <div className="avatar--container">
+      <img className="avatar" src={src} alt="Rachel Hall" />
+    </div>
+  );
+};

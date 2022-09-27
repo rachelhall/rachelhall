@@ -1,0 +1,15 @@
+.header {
+  margin: 0 6rem;
+}
+.header--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.header--content {
+  margin-top: 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+  //   max-width: 65vw;
+}

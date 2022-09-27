@@ -1,0 +1,8 @@
+.portfolio--items {
+  display: flex;
+  overflow-x: scroll;
+
+  & > * {
+    margin: 0 1rem;
+  }
+}

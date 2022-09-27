@@ -1,0 +1,20 @@
+.closeButton {
+  background: none;
+  display: flex;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: inherit;
+  font-size: 3rem;
+  color: var(--light-pink);
+  justify-content: flex-end;
+  transition: color 0.15s ease-in-out;
+}
+
+.closeButton:hover {
+  color: var(--purple);
+}
