@@ -4,6 +4,7 @@ import "./styles.scss";
 
 interface IProps {
   children?: JSX.Element | string;
+  color?: "pink" | "light-pink" | "blue";
   fontSize?: "small" | "medium" | "large" | "huge";
   fontWeight?: "light" | "regular" | "bold";
   uppercase?: boolean;
@@ -12,6 +13,7 @@ interface IProps {
 
 export const Text: React.FC<IProps> = ({
   children,
+  color,
   fontSize = "medium",
   fontWeight = "regular",
   uppercase = false,
@@ -27,6 +29,8 @@ export const Text: React.FC<IProps> = ({
     "text--spacing-large": verticalSpacing === "large",
     "text--light": fontWeight === "light",
     "text--bold": fontWeight === "bold",
+    "text--light-pink": color === "light-pink",
+    "text--blue": color === "blue",
   });
   return (
     <div className="text">

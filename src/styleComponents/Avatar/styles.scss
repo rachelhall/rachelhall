@@ -1,13 +1,41 @@
 .avatar--container {
+  height: 28rem;
+  width: 30rem;
+  overflow: hidden;
+  transform: translateY(-8rem);
+}
+.avatar--background {
+  background-color: var(--light-pink);
+  height: 1.5rem;
+  width: 30rem;
+  position: absolute;
+  bottom: 0;
+}
+.avatar--inner {
   border-radius: 84% 38% 70% 43% / 55% 74% 59% 71%;
   background-color: var(--pink);
   border: 20px solid var(--blue);
   height: 15rem;
   width: 25rem;
+  overflow: hidden;
+  position: absolute;
+  top: 10rem;
+  z-index: -1;
+}
+.avatar--inner.c2 {
+  border-radius: 84% 38% 70% 43% / 55% 74% 59% 71%;
+  background-color: transparent;
+  border-left: 20px solid var(--blue);
+  border-right: 20px solid var(--blue);
+  border-bottom: 20px solid var(--blue);
+  border-top: 20px solid transparent;
+  height: 15rem;
+  width: 25rem;
+  z-index: 1;
 }
 
 .avatar {
   width: 35rem;
-  transform: translate(-10rem, -12rem);
-  margin-bottom: 5rem;
+  transform: translate(-100px, -25px);
+  // margin-bottom: 5rem;
 }

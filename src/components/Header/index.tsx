@@ -8,6 +8,7 @@ import "./styles.scss";
 import { BsCodeSquare, BsFileEarmarkMusic } from "react-icons/bs";
 import { GiHollowCat, GiRollerSkate } from "react-icons/gi";
 import { Link } from "../../styleComponents/Link";
+import { Contact } from "../Contact";
 
 interface IProps {}
 
@@ -47,22 +48,27 @@ export const Header: React.FC<IProps> = () => {
               </>
             </Text>
           </Link>
-          <Text fontSize="large" uppercase fontWeight="bold">
-            <>
-              <GiHollowCat /> Cat Mom
-            </>
-          </Text>
+          <Link url="#">
+            <Text fontSize="large" uppercase fontWeight="bold">
+              <>
+                <GiHollowCat /> Cat Mom
+              </>
+            </Text>
+          </Link>
         </div>
         <div>
           <Avatar src={rachel} />
-          <Text verticalSpacing="large">
-            I'm a musician turned software engineer, specialzing in React.js. I
-            love writing clean reusable code that's well-organized and easy to
-            maintain. Some of my favorite tools to work with include Typescript,
-            Next.js, Graphql, Python and Django. Outside of work, I enjoy
-            recording music with friends and rollerblading across souther
-            California.
-          </Text>
+          <div className="header--bio">
+            <Text verticalSpacing="large">
+              I'm a musician turned software engineer, specialzing in React.js.
+              I love writing clean reusable code that's well-organized and easy
+              to maintain. Some of my favorite tools to work with include
+              Typescript, Next.js, Graphql, Python and Django. Outside of work,
+              I enjoy recording music with friends and rollerblading across
+              souther California.
+            </Text>
+            <Contact />
+          </div>
         </div>
       </div>
     </div>
