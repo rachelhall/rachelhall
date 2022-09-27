@@ -7,7 +7,6 @@ import { BsCodeSquare, BsFileEarmarkMusic } from "react-icons/bs";
 import { GiHollowCat, GiRollerSkate } from "react-icons/gi";
 import { Link } from "../../styleComponents/Link";
 import { Contact } from "../Contact";
-import cats from "../../media/cats.jpeg";
 
 import "./styles.scss";
 import { useModal } from "../../utils/useModal";
@@ -19,12 +18,7 @@ interface IProps {}
 export const Header: React.FC<IProps> = () => {
   const { handleModal, modal } = useModal({
     heading: "Cats",
-    content: (
-      <div>
-        Coming soon...
-        {/* <img src={cats} height="200" alt="3 cats looking out the window" /> */}
-      </div>
-    ),
+    content: <div>Coming soon...</div>,
   });
 
   const handleClick = (e: React.FormEvent) => {
@@ -38,12 +32,14 @@ export const Header: React.FC<IProps> = () => {
       <Nav pages={pages}></Nav>
       <div className="header--content">
         <div className="header--title">
-          <Text fontSize="huge" uppercase fontWeight="bold">
-            Rachel
-          </Text>
-          <Text fontSize="huge" uppercase fontWeight="bold">
-            Hall
-          </Text>
+          <div className="header--name">
+            <Text fontSize="huge" uppercase fontWeight="bold">
+              Rachel
+            </Text>
+            <Text fontSize="huge" uppercase fontWeight="bold">
+              Hall
+            </Text>
+          </div>
           <Link url="#portfolio">
             <Text fontSize="large" uppercase fontWeight="bold">
               <>
