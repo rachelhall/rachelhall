@@ -71,13 +71,8 @@ export const PortfolioItem: React.FC<IProps> = ({
     handleModal();
   };
   return (
-    <div onClick={handleClick}>
-      <img
-        height="200"
-        src={mainImage}
-        alt="Portfolio item"
-        className="portfolio--mainImage"
-      />
+    <div onClick={handleClick} className="portfolioItem--thumbnail">
+      <img height="200" src={mainImage} alt="Portfolio item" />
       {modal}
     </div>
   );

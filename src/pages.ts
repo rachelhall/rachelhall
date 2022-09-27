@@ -1,7 +1,7 @@
 import { INavItem } from "./components/Nav";
 
 export const pages: INavItem[] = [
-  { title: "home", url: "/" },
+  { title: "home", url: "#header" },
   { title: "resume", url: "/" },
   { title: "github", url: "https://github.com/rachelhall" },
   {

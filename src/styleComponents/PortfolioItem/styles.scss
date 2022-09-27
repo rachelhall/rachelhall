@@ -7,3 +7,12 @@
   border: 0.5rem solid var(--pink);
   border-radius: 5px;
 }
+
+.portfolioItem--thumbnail {
+  transition: transform 0.2s;
+
+  transform: scale(0.975);
+  &:hover {
+    transform: scale(1);
+  }
+}

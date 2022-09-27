@@ -1,15 +1,15 @@
 .header {
-  margin: 0 6rem;
+  margin: 0;
 }
 .header--title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-shrink: 1;
 }
 .header--content {
   margin-top: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2rem;
-  //   max-width: 65vw;
 }

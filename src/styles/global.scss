@@ -7,14 +7,17 @@
   --blue: #a2d2ff;
   --white: #fff6f9;
 }
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
   padding: 20px 20px 60px;
   color: var(--pink);
   background-color: var(--light-pink);
-  margin: 0 auto;
-  scroll-behavior: smooth;
+  margin: 0 12rem;
 }
 
 .no-scroll {

@@ -13,7 +13,7 @@ interface IProps {}
 
 export const Header: React.FC<IProps> = () => {
   return (
-    <div className="header">
+    <div className="header" id="header">
       <Nav pages={pages}></Nav>
       <div className="header--content">
         <div className="header--title">
@@ -30,16 +30,23 @@ export const Header: React.FC<IProps> = () => {
               </>
             </Text>
           </Link>
-          <Text fontSize="large" uppercase fontWeight="bold">
-            <>
-              <BsFileEarmarkMusic /> Musician
-            </>
-          </Text>
-          <Text fontSize="large" uppercase fontWeight="bold">
-            <>
-              <GiRollerSkate /> Rollerblader
-            </>
-          </Text>
+          <Link
+            external={true}
+            url="https://lightning100.com/localmusic/mariela-local-artist-of-the-week/"
+          >
+            <Text fontSize="large" uppercase fontWeight="bold">
+              <>
+                <BsFileEarmarkMusic /> Musician
+              </>
+            </Text>
+          </Link>
+          <Link external={true} url="https://www.instagram.com/grindylocks/">
+            <Text fontSize="large" uppercase fontWeight="bold">
+              <>
+                <GiRollerSkate /> Rollerblader
+              </>
+            </Text>
+          </Link>
           <Text fontSize="large" uppercase fontWeight="bold">
             <>
               <GiHollowCat /> Cat Mom

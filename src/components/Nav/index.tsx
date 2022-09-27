@@ -1,3 +1,4 @@
+import { Link } from "../../styleComponents/Link";
 import "./styles.scss";
 
 export interface INavItem {
@@ -14,7 +15,9 @@ export const Nav: React.FC<IProps> = ({ pages }) => {
     <div>
       <ul className="nav--list">
         {pages.map((page) => (
-          <li className="nav--item">{page.title}</li>
+          <Link url={page.url}>
+            <li className="nav--item">{page.title}</li>
+          </Link>
         ))}
       </ul>
     </div>

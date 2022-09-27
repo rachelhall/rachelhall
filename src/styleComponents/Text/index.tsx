@@ -29,7 +29,7 @@ export const Text: React.FC<IProps> = ({
     "text--bold": fontWeight === "bold",
   });
   return (
-    <div className="Text">
+    <div className="text">
       <p className={mainClass}>{children}</p>
     </div>
   );
