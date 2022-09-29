@@ -79,7 +79,7 @@ export const Header: React.FC<IProps> = () => {
           <Avatar src={rachel} />
           <div className="header--bio">
             <Text verticalSpacing={isMobile ? "small" : "large"}>
-              I'm a musician turned software engineer, specialzing in React.js.
+              I'm a musician turned software engineer, specializing in React.js.
               I love writing clean reusable code that's well-organized and easy
               to maintain. Some of my favorite tools include Typescript,
               Next.js, Graphql, Python and Django. Outside of work, I enjoy

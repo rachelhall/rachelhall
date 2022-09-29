@@ -62,7 +62,7 @@ export const PortfolioItem: React.FC<IProps> = ({
           </div>
           <div className="portfolioItem--link">
             <Text>{description}</Text>
-            <Link url={url} animation={false}>
+            <Link url={url} animation={false} external={true}>
               <Text fontWeight="bold" color="pink">
                 View site
               </Text>
