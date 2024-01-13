@@ -1,7 +1,7 @@
 import { pages } from "../../pages";
 import { Nav } from "../Nav";
 import { Text } from "../../styleComponents/Text";
-import rachel from "../../media/rachel.png";
+import rachel from "../../media/rachel-2.png";
 import { Avatar } from "../../styleComponents/Avatar";
 import { BsCodeSquare, BsFileEarmarkMusic } from "react-icons/bs";
 import { GiHollowCat, GiRollerSkate } from "react-icons/gi";
@@ -13,7 +13,7 @@ import { useModal } from "../../utils/useModal";
 import React from "react";
 import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
 
-interface IProps {}
+interface IProps { }
 
 export const Header: React.FC<IProps> = () => {
   const { handleModal, modal } = useModal({

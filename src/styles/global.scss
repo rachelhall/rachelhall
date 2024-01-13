@@ -1,16 +1,17 @@
 :root {
   --purple: #cdb4db;
-  --light-pink: #ffdfe9;
-  --pink-hover: #fb749f;
-  --pink: #ff5d8f;
+  --light-pink: #E5E6E4;
+  --pink-hover: rgb(243, 125, 162);
+  --pink: #E2344B;
   --light-blue: #bde0fe;
-  --blue: #a2d2ff;
-  --white: #fff6f9;
+  --blue: #3C91E6;
+  --white: #FBFBF2;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Roboto", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
@@ -24,6 +25,7 @@ body {
     padding: 0;
   }
 }
+
 ul {
   padding-inline-start: 0;
   margin-block-start: 0;
