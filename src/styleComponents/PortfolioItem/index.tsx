@@ -9,6 +9,7 @@ import { ECodeTool } from "../../portfolioData";
 import { Link } from "../Link";
 
 import "./styles.scss";
+import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
 
 interface IProps {
   mainImage: string;
@@ -45,6 +46,9 @@ export const PortfolioItem: React.FC<IProps> = ({
   url,
   tools,
 }) => {
+
+  const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
+
   const { handleModal, modal } = useModal({
     heading: title,
     content: (
@@ -53,7 +57,7 @@ export const PortfolioItem: React.FC<IProps> = ({
           <div>
             <img
               src={mainImage}
-              height="200"
+              height={isMobile ? "150" : "200"}
               alt="Thumbnail of portfolio item."
               className="portfolioItem--image"
             />

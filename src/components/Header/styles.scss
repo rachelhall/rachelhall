@@ -1,18 +1,21 @@
 .header {
   margin: 0;
 }
+
 .header--title {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-shrink: 1;
 }
+
 .header--content {
   margin-top: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 2rem;
-  @media (max-width: 600px) {
+
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
     margin-top: 0;
   }
@@ -20,14 +23,15 @@
 
 .header--bio {
   transform: translateY(-10rem);
-  @media (max-width: 600px) {
+
+  @media (max-width: 640px) {
     transform: translate(0);
     margin: 1rem;
   }
 }
 
 .header--name {
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     display: flex;
   }
 }

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 export enum EMediaBreakPoint {
   desktop = '(min-width: 960px)',
-  mobile = '(max-width: 600px)',
+  mobile = '(max-width: 640px)',
   tablet = '(min-width: 768px) ',
 }
 

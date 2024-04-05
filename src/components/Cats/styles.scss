@@ -7,8 +7,9 @@
 .cat-card-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
         flex-direction: column;
     }
 }

@@ -3,11 +3,13 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
   overflow-y: scroll;
-  @media (max-width: 600px) {
+
+  @media (max-width: 640px) {
     grid-template-columns: 1fr;
   }
 }
-.portfolioItem--tools > * {
+
+.portfolioItem--tools>* {
   margin-right: 0.5rem;
   color: var(--pink);
 }
@@ -15,6 +17,7 @@
 .portfolioItem--link {
   color: var(--pink);
 }
+
 .portfolioItem--thumbnail {
   border: 0.5rem solid var(--pink);
   border-radius: 0.5rem;
