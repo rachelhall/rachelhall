@@ -2,7 +2,7 @@ import oldschool from "./media/app.png";
 import txleaguer from "./media/tx-leaguer.png";
 import synth from "./media/synth.png";
 import zenlist from "./media/zenlist.png";
-import spacex from "./media/spacex.png";
+import rebellion from "./media/rebellion.png"
 
 export enum ECodeTool {
   HTML = "HTML",
@@ -11,6 +11,7 @@ export enum ECodeTool {
   REACT = "React",
   REACT_NATIVE = "React Native",
   GRAPHQL = "Graphql",
+  PYTHON = "Python"
 }
 
 export interface IPortfolioItem {
@@ -23,6 +24,17 @@ export interface IPortfolioItem {
 
 export const portfolioData: IPortfolioItem[] = [
   {
+    title: "Rebellion Defense", url: "https://rebelliondefense.com/", mainImage: rebellion,
+    description: "Rebellion Defense specializes in AI driven data visualization solutions for the US military. I worked with React, Vue, GraphQL and Python to create dashboards for military intelligence personnel to visualize surveillance data make weapons target pairing decisions.",
+    tools: [
+      ECodeTool.CSS,
+      ECodeTool.JAVASCRIPT,
+      ECodeTool.REACT,
+      ECodeTool.GRAPHQL,
+      ECodeTool.PYTHON
+    ]
+  },
+  {
     title: "Zenlist, Inc.",
     url: "https:www.zenlist.com",
     mainImage: zenlist,
@@ -33,21 +45,8 @@ export const portfolioData: IPortfolioItem[] = [
       ECodeTool.CSS,
       ECodeTool.JAVASCRIPT,
       ECodeTool.REACT,
-      // ECodeTool.REACT_NATIVE,
+      ECodeTool.REACT_NATIVE,
       ECodeTool.GRAPHQL,
-    ],
-  },
-  {
-    title: "Mission Tracker",
-    url: "https://spacex-mission-tracker.netlify.app/",
-    mainImage: spacex,
-    description:
-      "Mission Tracker accesses the Space-X api to gather information about upcoming missions.",
-    tools: [
-      ECodeTool.HTML,
-      ECodeTool.CSS,
-      ECodeTool.JAVASCRIPT,
-      ECodeTool.REACT,
     ],
   },
   {

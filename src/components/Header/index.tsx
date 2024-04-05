@@ -12,13 +12,14 @@ import "./styles.scss";
 import { useModal } from "../../utils/useModal";
 import React from "react";
 import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
+import { Cats } from "../Cats/Cats";
 
 interface IProps { }
 
 export const Header: React.FC<IProps> = () => {
   const { handleModal, modal } = useModal({
     heading: "Cats",
-    content: <div>Coming soon...</div>,
+    content: <Cats />,
   });
 
   const handleClick = (e: React.FormEvent) => {
@@ -29,7 +30,7 @@ export const Header: React.FC<IProps> = () => {
   const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
   return (
     <div className="header" id="header">
-      <Nav pages={pages}></Nav>
+      <Nav pages={pages} />
       <div className="header--content">
         <div className="header--title">
           <div className="header--name">
@@ -49,7 +50,7 @@ export const Header: React.FC<IProps> = () => {
           </Link>
           <Link
             external={true}
-            url="https://lightning100.com/localmusic/mariela-local-artist-of-the-week/"
+            url="https://www.mariela.band"
           >
             <Text fontSize="large" uppercase fontWeight="bold">
               <>
@@ -82,7 +83,7 @@ export const Header: React.FC<IProps> = () => {
               I'm a musician turned software engineer, specializing in React.js.
               I love writing clean reusable code that's well-organized and easy
               to maintain. Some of my favorite tools include Typescript,
-              Next.js, Graphql, Python and Django. Outside of work, I enjoy
+              Next.js, Graphql, and Python. Outside of work, I enjoy
               recording music with friends and rollerblading across southern
               California.
             </Text>

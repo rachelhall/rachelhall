@@ -1,12 +1,13 @@
-.nav--item {
-}
+.nav--item {}
 
 .nav--list {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
   min-width: 100%;
+
   @media (max-width: 600px) {
     justify-content: space-between;
+    display: none;
   }
 }

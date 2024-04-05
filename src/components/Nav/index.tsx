@@ -1,5 +1,6 @@
 import { Link } from "../../styleComponents/Link";
 import { Text } from "../../styleComponents/Text";
+
 import "./styles.scss";
 
 export interface INavItem {
@@ -12,6 +13,9 @@ interface IProps {
 }
 
 export const Nav: React.FC<IProps> = ({ pages }) => {
+
+
+
   return (
     <div>
       <ul className="nav--list">

@@ -10,13 +10,16 @@ interface IProps {
   uppercase?: boolean;
   textAlign?: "left" | "center" | "right";
   verticalSpacing?: "small" | "large";
+  italic?: boolean;
 }
 
 export const Text: React.FC<IProps> = ({
+
   children,
   color,
   fontSize = "medium",
   fontWeight = "regular",
+  italic = false,
   uppercase = false,
   textAlign,
   verticalSpacing,
@@ -35,6 +38,7 @@ export const Text: React.FC<IProps> = ({
     "text--blue": color === "blue",
     "text--pink": color === "pink",
     "text--center": textAlign === "center",
+    "text--italic": italic === true
   });
   return (
     <div className="text">
