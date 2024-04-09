@@ -36,7 +36,7 @@ export const portfolioData: IPortfolioItem[] = [
   },
   {
     title: "Zenlist, Inc.",
-    url: "https:www.zenlist.com",
+    url: "https://www.zenlist.com",
     mainImage: zenlist,
     description:
       "Zenlist is a real estate tech platform similar to Zillow. I worked as a frontend engineer on the mobile and web teams. Zenlist uses React, React Native, Redux and Graphql.",
