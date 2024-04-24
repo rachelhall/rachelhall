@@ -49,19 +49,19 @@ export const portfolioData: IPortfolioItem[] = [
       ECodeTool.GRAPHQL,
     ],
   },
-  {
-    title: "Old School",
-    url: "https://portfolio-old-school.vercel.app/",
-    mainImage: oldschool,
-    description:
-      "Uses React to build a single page web application that feels like an old Mac desktop. It incorparates draggable windows and updatable desktop wallpaper.",
-    tools: [
-      ECodeTool.HTML,
-      ECodeTool.CSS,
-      ECodeTool.JAVASCRIPT,
-      ECodeTool.REACT,
-    ],
-  },
+  // {
+  //   title: "Old School",
+  //   url: "https://portfolio-old-school.vercel.app/",
+  //   mainImage: oldschool,
+  //   description:
+  //     "Uses React to build a single page web application that feels like an old Mac desktop. It incorparates draggable windows and updatable desktop wallpaper.",
+  //   tools: [
+  //     ECodeTool.HTML,
+  //     ECodeTool.CSS,
+  //     ECodeTool.JAVASCRIPT,
+  //     ECodeTool.REACT,
+  //   ],
+  // },
   {
     title: "Tx Leaguer Brewing",
     url: "https://txleaguer.com/",
