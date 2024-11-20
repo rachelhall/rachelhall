@@ -1,4 +1,4 @@
-import { ForwardedRef, forwardRef, RefObject } from "react";
+import { ForwardedRef, forwardRef } from "react";
 import { ModalHeader } from "../../components/ModalHeader";
 
 import "./styles.scss";
@@ -9,7 +9,6 @@ interface IProps {
   heading?: string;
   modalContent?: JSX.Element;
   url?: string;
-  ref: RefObject<HTMLDivElement>;
 }
 
 export const ModalContent = forwardRef(
