@@ -6,9 +6,7 @@ import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
 
 import "./styles.scss";
 
-interface IProps {}
-
-export const Contact: React.FC<IProps> = () => {
+export const Contact: React.FC = () => {
   const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
 
   return (

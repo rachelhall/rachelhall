@@ -6,9 +6,7 @@ import { Text } from "../../styleComponents";
 
 import "./styles.scss";
 
-interface IProps extends IPortfolioItem {}
-
-export const PortfolioItem: React.FC<IProps> = ({
+export const PortfolioItem: React.FC<IPortfolioItem> = ({
   bulletPoints,
   description,
   title,

@@ -13,9 +13,7 @@ import React from "react";
 import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
 import { Cats } from "../Cats/Cats";
 
-interface IProps {}
-
-export const Header: React.FC<IProps> = () => {
+export const Header: React.FC = () => {
   const { handleModal, modal } = useModal({
     heading: "Cats",
     content: <Cats />,

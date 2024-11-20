@@ -3,9 +3,8 @@ import { PortfolioItem } from "../../styleComponents/PortfolioItem";
 import { Text } from "../../styleComponents/Text";
 
 import "./styles.scss";
-interface IProps {}
 
-export const Portfolio: React.FC<IProps> = () => {
+export const Portfolio: React.FC = () => {
   return (
     <div id="portfolio" className="portfolio">
       <Text uppercase fontSize="large" fontWeight="bold">
