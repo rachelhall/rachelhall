@@ -1,0 +1,19 @@
+.Technologies {
+  color: var(--pink);
+}
+
+.iconsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  @media (max-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.horizontal {
+  flex-direction: row;
+}

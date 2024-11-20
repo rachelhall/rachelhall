@@ -1,0 +1,48 @@
+.header {
+  margin: 0 0 4rem;
+  padding: 1rem;
+
+  @media (max-width: 640px) {
+    margin: 0;
+  }
+}
+
+.header--title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 1;
+  gap: 1rem;
+}
+
+.header--content {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 0;
+  }
+}
+
+.header--bio {
+  transform: translateY(-10rem);
+  margin-bottom: -10rem;
+  max-width: 35rem;
+
+  @media (max-width: 640px) {
+    transform: translate(0);
+    margin: 1rem;
+  }
+}
+
+.header--name {
+  @media (max-width: 640px) {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

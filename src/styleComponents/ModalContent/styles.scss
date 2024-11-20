@@ -1,0 +1,24 @@
+.ModalContent {
+  background-color: var(--light-pink);
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  height: 600px;
+  max-width: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 65%;
+  z-index: 1010;
+
+  @media (max-width: 640px) {
+    width: 95%;
+  }
+}
+
+.ModalContent-inner {
+  padding: 2rem;
+  height: 100%;
+
+  @media (max-width: 640px) {
+    padding: 1rem;
+  }
+}

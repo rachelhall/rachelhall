@@ -1,0 +1,36 @@
+.cats {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cat-card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1rem;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.single-cat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 205px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cat-image {
+  border: 0.5rem solid var(--pink);
+  border-radius: 5px;
+}

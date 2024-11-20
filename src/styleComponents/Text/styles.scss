@@ -1,0 +1,113 @@
+.text {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.15s ease-in-out;
+      background-color: var(--light-pink);
+    }
+
+    svg {
+      font-size: inherit;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      filter: brightness(115%);
+    }
+  }
+  button:hover {
+    filter: brightness(115%);
+  }
+
+  &--dark {
+    a {
+      &:hover {
+        filter: brightness(115%);
+      }
+    }
+  }
+
+  &--small {
+    font-size: 1rem;
+  }
+
+  &--medium {
+    font-size: 1.75rem;
+
+    @media (max-width: 640px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &--large {
+    font-size: 2.5rem;
+
+    @media (max-width: 640px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &--huge {
+    font-size: 5rem;
+
+    @media (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--spacing-small {
+    margin: 2rem 0;
+  }
+
+  &--spacing-large {
+    margin: 4rem 0;
+  }
+
+  &--light {
+    font-weight: 200;
+  }
+
+  &--bold {
+    font-weight: 900;
+  }
+
+  &--light-pink {
+    color: var(--light-pink);
+  }
+
+  &--blue {
+    color: var(--blue);
+  }
+
+  &--pink {
+    color: var(--pink);
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+}
