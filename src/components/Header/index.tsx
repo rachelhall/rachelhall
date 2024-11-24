@@ -10,7 +10,7 @@ import { Contact } from "../Contact";
 import "./styles.scss";
 import { useModal } from "../../utils/useModal";
 import React from "react";
-import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
+
 import { Cats } from "../Cats/Cats";
 
 export const Header: React.FC = () => {
@@ -22,8 +22,6 @@ export const Header: React.FC = () => {
   const handleClick = () => {
     handleModal();
   };
-
-  const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
 
   return (
     <header className="header" id="header">

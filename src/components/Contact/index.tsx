@@ -2,13 +2,10 @@ import { Text } from "../../styleComponents/Text";
 import { FiPhone } from "react-icons/fi";
 import { AiOutlineMail } from "react-icons/ai";
 import { Link } from "../../styleComponents/Link";
-import { EMediaBreakPoint, useMediaQuery } from "../../utils/useMediaQuery";
 
 import "./styles.scss";
 
 export const Contact: React.FC = () => {
-  const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
-
   return (
     <div className="contact">
       <div className="contact--content">
