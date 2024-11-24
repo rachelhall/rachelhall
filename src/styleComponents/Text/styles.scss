@@ -21,7 +21,7 @@
     }
 
     svg {
-      font-size: inherit;
+      font-size: 2rem;
     }
 
     &:visited {
@@ -43,29 +43,56 @@
     }
   }
 
-  &--small {
+  &--tiny {
     font-size: 1rem;
+  }
+  &--small {
   }
 
   &--medium {
-    font-size: 1.75rem;
-
     @media (max-width: 640px) {
       font-size: 1.25rem;
     }
   }
 
   &--large {
-    font-size: 2.5rem;
-
     @media (max-width: 640px) {
       font-size: 1.5rem;
     }
   }
 
   &--huge {
-    font-size: 5rem;
+    @media (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+  }
 
+  &--way-huge {
+    font-size: 8rem;
+    @media (max-width: 1250px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 1120px) {
+      font-size: 6rem;
+    }
+    @media (max-width: 990px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+  }
+  &--massive {
+    font-size: 14rem;
+    @media (max-width: 1250px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 1120px) {
+      font-size: 6rem;
+    }
+    @media (max-width: 990px) {
+      font-size: 5rem;
+    }
     @media (max-width: 640px) {
       font-size: 2.5rem;
     }

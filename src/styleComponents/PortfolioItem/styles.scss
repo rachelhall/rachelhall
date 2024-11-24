@@ -26,7 +26,8 @@
   border: 0.5rem solid var(--pink);
   transition: box-shadow, transform 0.1s;
   min-height: 10rem;
-  width: 300px;
+  max-width: 200px;
+
   display: flex;
   justify-content: center;
   align-items: center;

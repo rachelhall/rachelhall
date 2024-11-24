@@ -11,30 +11,35 @@ export const Contact: React.FC = () => {
 
   return (
     <div className="contact">
-      <Link url="tel:251-472-5419" animation={false}>
-        <Text
-          color="light-pink"
-          fontWeight="bold"
-          fontSize={isMobile ? "small" : "medium"}
-          leadingIcon={FiPhone}
+      <div className="contact--content">
+        <Link url="tel:251-472-5419" animation={false}>
+          <Text
+            color="light-pink"
+            fontWeight="bold"
+            fontSize="tiny"
+            leadingIcon={FiPhone}
+            url="tel:251-472-5419"
+          >
+            251-472-5419
+          </Text>
+        </Link>
+        <Link
+          external={true}
+          url="mailto:rachelraspberrypie@gmail.com?subject=I%20visited%20your%20portfolio%20today"
+          animation={false}
         >
-          251-472-5419
-        </Text>
-      </Link>
-      <Link
-        external={true}
-        url="mailto:rachelraspberrypie@gmail.com?subject=I%20visited%20your%20portfolio%20today"
-        animation={false}
-      >
-        <Text
-          leadingIcon={AiOutlineMail}
-          color="light-pink"
-          fontWeight="bold"
-          fontSize={isMobile ? "small" : "medium"}
-        >
-          rachelraspberrypie@gmail.com
-        </Text>
-      </Link>
+          <Text
+            external={true}
+            url="mailto:rachelraspberrypie@gmail.com?subject=I%20visited%20your%20portfolio%20today"
+            leadingIcon={AiOutlineMail}
+            color="light-pink"
+            fontSize="tiny"
+            fontWeight="bold"
+          >
+            rachelraspberrypie@gmail.com
+          </Text>
+        </Link>
+      </div>
     </div>
   );
 };
