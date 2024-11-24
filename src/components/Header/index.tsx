@@ -24,88 +24,95 @@ export const Header: React.FC = () => {
   };
 
   const isMobile = useMediaQuery(EMediaBreakPoint.mobile);
+
   return (
     <header className="header" id="header">
       <Nav pages={pages} />
       <div className="header--content">
         <div className="header--title">
-          <div className="header--name">
-            <Text
-              textAlign="center"
-              fontSize="huge"
-              uppercase
-              fontWeight="bold"
-            >
-              Rachel
-            </Text>
-            <Text fontSize="huge" uppercase fontWeight="bold">
-              Hall
-            </Text>
+          <div className="header--title-inner">
+            <div className="header--name">
+              <Text
+                textAlign="right"
+                fontSize="way-huge"
+                uppercase
+                fontWeight="bold"
+              >
+                Rachel
+              </Text>
+              <Text fontSize="way-huge" uppercase fontWeight="bold">
+                Hall
+              </Text>
+            </div>
+            <Avatar src={rachel} />
           </div>
-
-          <Text
-            url="#portfolio"
-            leadingIcon={BsCodeSquare}
-            fontSize="large"
-            uppercase
-            fontWeight="bold"
-            external={false}
-          >
-            Software Developer
-          </Text>
-
-          <Text
-            leadingIcon={BsFileEarmarkMusic}
-            fontSize="large"
-            uppercase
-            fontWeight="bold"
-            external={true}
-            url="https://www.mariela.band"
-          >
-            Musician
-          </Text>
-
-          <Text
-            leadingIcon={GiRollerSkate}
-            fontSize="large"
-            uppercase
-            fontWeight="bold"
-            external={true}
-            url="https://www.instagram.com/grindylocks/"
-          >
-            Rollerblader
-          </Text>
-
-          <div role="button" onClick={handleClick}>
+          <div className="header--links">
             <Text
-              onClick={handleClick}
-              leadingIcon={GiHollowCat}
-              fontSize="large"
+              url="#portfolio"
+              leadingIcon={BsCodeSquare}
+              fontSize="small"
               uppercase
               fontWeight="bold"
-              url=""
+              external={false}
             >
-              Cat Mom
+              Software Developer
             </Text>
+
+            <Text
+              leadingIcon={BsFileEarmarkMusic}
+              fontSize="small"
+              uppercase
+              fontWeight="bold"
+              external={true}
+              url="https://www.mariela.band"
+            >
+              Musician
+            </Text>
+
+            <Text
+              leadingIcon={GiRollerSkate}
+              fontSize="small"
+              uppercase
+              fontWeight="bold"
+              external={true}
+              url="https://www.instagram.com/grindylocks/"
+            >
+              Rollerblader
+            </Text>
+
+            <div role="button" onClick={handleClick}>
+              <Text
+                onClick={handleClick}
+                leadingIcon={GiHollowCat}
+                fontSize="small"
+                uppercase
+                fontWeight="bold"
+              >
+                Cat Mom
+              </Text>
+            </div>
           </div>
           <Contact />
-        </div>
-        <div>
-          <Avatar src={rachel} />
-          <div className="header--bio">
-            <Text verticalSpacing={isMobile ? "small" : "large"}>
-              From composer to coder, I’m a musician-turned-engineer who
-              specializes in building clean, reusable apps with React.js,
-              TypeScript, Next.js, and Python. I’m passionate about writing
-              well-organized, maintainable code and enjoy using tools like
-              GraphQL and React Query to create scalable applications with
-              seamless user experiences. Outside of work, you’ll find me
-              recording music with friends or rollerblading through Southern
-              California.
-            </Text>
+          <div className="header--bio-container">
+            <div className="header--bio">
+              <Text
+                // verticalSpacing={isMobile ? "small" : "large"}
+                fontWeight="bold"
+              >
+                From composer to coder, I’m a musician-turned-engineer who
+                specializes in building clean, reusable apps with React.js,
+                TypeScript, Next.js, and Python. I’m passionate about writing
+                well-organized, maintainable code and enjoy using tools like
+                GraphQL and React Query to create scalable applications with
+                seamless user experiences. Outside of work, you’ll find me
+                recording music with friends or rollerblading through Southern
+                California.
+              </Text>
+            </div>
           </div>
         </div>
       </div>
+
       {modal}
     </header>
   );

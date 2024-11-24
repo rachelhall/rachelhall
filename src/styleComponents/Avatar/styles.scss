@@ -2,7 +2,11 @@
   height: 28rem;
   width: 30rem;
   overflow: hidden;
-  transform: translateY(-8rem);
+  transform: translateY(9rem) translateX(-2rem);
+
+  @media (max-width: 1120px) {
+    transform: translateY(5rem) translateX(0);
+  }
 
   @media (max-width: 640px) {
     display: none;
