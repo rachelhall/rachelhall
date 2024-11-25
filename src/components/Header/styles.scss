@@ -26,6 +26,9 @@
       transform: unset;
       max-width: 24px;
     }
+    @media (max-width: 640px) {
+      max-width: unset;
+    }
   }
 
   @media (max-width: 640px) {
