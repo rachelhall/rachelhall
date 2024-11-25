@@ -66,14 +66,13 @@ export const Header: React.FC = () => {
             >
               Musician
             </Text>
-
             <Text
               leadingIcon={GiRollerSkate}
               fontSize="small"
               uppercase
               fontWeight="bold"
               external={true}
-              url="https://www.instagram.com/grindylocks/"
+              url="https://www.mariela.band"
             >
               Rollerblader
             </Text>

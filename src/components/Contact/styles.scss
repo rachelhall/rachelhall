@@ -6,8 +6,8 @@
   height: 7rem;
   width: 22rem;
   border-radius: 31% 79% 31% 75%/69% 78% 55% 65%;
-  border: 20px solid var(--blue);
-  background-color: var(--pink);
+  border: 20px solid var(--primary);
+  background-color: var(--secondary);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@
     padding: 0 2rem;
   }
   &--background {
-    background-color: var(--light-pink);
+    background-color: var(--white);
     height: 1.5rem;
     width: 30rem;
     position: absolute;
@@ -34,10 +34,9 @@
   }
 
   @media (max-width: 640px) {
-    transform: unset;
     border-radius: 31% 79% 31% 75%/95% 78% 55% 65%;
     max-width: 21rem;
-    border: 12px solid var(--blue);
+    border: 12px solid var(--primary);
   }
 
   &--list-item {

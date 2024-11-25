@@ -14,7 +14,7 @@
 }
 
 .avatar--background {
-  background-color: var(--light-pink);
+  background-color: var(--white);
   height: 1.5rem;
   width: 30rem;
   position: absolute;
@@ -23,8 +23,8 @@
 
 .avatar--inner {
   border-radius: 84% 38% 70% 43% / 55% 74% 59% 71%;
-  background-color: var(--pink);
-  border: 20px solid var(--blue);
+  background-color: var(--secondary);
+  border: 20px solid var(--primary);
   height: 15rem;
   width: 25rem;
   overflow: hidden;
@@ -36,9 +36,9 @@
 .avatar--inner.c2 {
   border-radius: 84% 38% 70% 43% / 55% 74% 59% 71%;
   background-color: transparent;
-  border-left: 20px solid var(--blue);
-  border-right: 20px solid var(--blue);
-  border-bottom: 20px solid var(--blue);
+  border-left: 20px solid var(--primary);
+  border-right: 20px solid var(--primary);
+  border-bottom: 20px solid var(--primary);
   border-top: 20px solid transparent;
   height: 15rem;
   width: 25rem;

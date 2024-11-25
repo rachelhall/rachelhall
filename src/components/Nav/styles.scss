@@ -2,9 +2,11 @@
 }
 
 .nav--list {
+  position: relative;
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  z-index: 10;
 
   @media (max-width: 640px) {
     justify-content: space-between;

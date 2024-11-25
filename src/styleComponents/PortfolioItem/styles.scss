@@ -2,7 +2,7 @@
   display: flex;
   gap: 2rem;
   overflow-y: scroll;
-  color: var(--pink);
+  color: var(--primary);
 
   &--text {
     display: flex;
@@ -23,10 +23,10 @@
 }
 
 .portfolioItem--thumbnail {
-  border: 0.5rem solid var(--pink);
+  border: 0.5rem solid var(--primary);
   transition: box-shadow, transform 0.1s;
   min-height: 10rem;
-  max-width: 200px;
+  max-width: 280px;
 
   display: flex;
   justify-content: center;
@@ -36,13 +36,13 @@
 
 .portfolioItem--thumbnail:hover {
   box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.51);
-  background-color: var(--pink);
-  color: var(--light-pink);
-  border: 0.5rem solid var(--blue);
+  background-color: var(--secondary);
+  color: var(--white);
+  border: 0.5rem solid var(--secondary);
 }
 
 .portfolioItem--image {
   margin-bottom: 1rem;
-  border: 0.5rem solid var(--pink);
+  border: 0.5rem solid var(--primary);
   border-radius: 5px;
 }
