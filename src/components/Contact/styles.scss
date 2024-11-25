@@ -34,10 +34,9 @@
   }
 
   @media (max-width: 640px) {
-    transform: unset;
     border-radius: 31% 79% 31% 75%/95% 78% 55% 65%;
     max-width: 21rem;
-    border: 12px solid var(--secondary);
+    border: 12px solid var(--primary);
   }
 
   &--list-item {
