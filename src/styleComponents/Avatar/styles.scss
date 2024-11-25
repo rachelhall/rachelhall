@@ -48,8 +48,4 @@
 .avatar {
   width: 25rem;
   transform: translate(10px, 35px);
-
-  @media (max-width: 990px) {
-    width: 20rem;
-  }
 }
