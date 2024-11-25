@@ -14,7 +14,7 @@
 
   &--links {
     display: flex;
-
+    z-index: 10;
     flex-direction: column;
     gap: 1rem;
     transform: translateY(3rem);

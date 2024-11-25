@@ -6,7 +6,7 @@ import { IconType } from "react-icons";
 interface IProps {
   children?: JSX.Element | string;
   className?: string;
-  color?: "pink" | "light-pink" | "blue" | "dark";
+  color?: "pink" | "white" | "blue" | "dark";
   external?: boolean;
   fontSize?:
     | "tiny"
@@ -56,7 +56,7 @@ export const Text: React.FC<IProps> = ({
       "text--spacing-large": verticalSpacing === "large",
       "text--light": fontWeight === "light",
       "text--bold": fontWeight === "bold",
-      "text--light-pink": color === "light-pink",
+      "text--white": color === "white",
       "text--blue": color === "blue",
       "text--pink": color === "pink",
       "text--dark": color === "dark",

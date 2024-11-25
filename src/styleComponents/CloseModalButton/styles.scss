@@ -6,8 +6,8 @@
 
 .closeButton {
   background: conic-gradient(
-    var(--light-pink-hover) var(--percentage),
-    var(--pink) 0
+    var(--white-hover) var(--percentage),
+    var(--primary) 0
   );
   aspect-ratio: 1;
   display: flex;
@@ -20,7 +20,7 @@
   right: 1rem;
   outline: inherit;
   font-size: 3rem;
-  color: var(--light-pink);
+  color: var(--white);
   justify-content: flex-end;
   z-index: 10;
   transition: --percentage 0.1s linear;
@@ -30,7 +30,7 @@
     position: absolute;
     inset: 4px;
     border-radius: inherit;
-    background: var(--pink);
+    background: var(--primary);
   }
   svg {
     z-index: 11;
@@ -39,7 +39,7 @@
   &:hover {
     --percentage: 100%;
     svg {
-      color: var(--light-pink-hover);
+      color: var(--white-hover);
     }
   }
 
