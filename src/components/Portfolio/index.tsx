@@ -7,7 +7,7 @@ import "./styles.scss";
 export const Portfolio: React.FC = () => {
   return (
     <div id="portfolio" className="portfolio">
-      <Text uppercase fontSize="large" fontWeight="bold">
+      <Text uppercase fontSize="medium" fontWeight="bold">
         Work History
       </Text>
       <div className="portfolio--items">

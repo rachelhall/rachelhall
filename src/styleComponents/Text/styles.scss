@@ -17,55 +17,82 @@
       bottom: 0;
       left: 0;
       transition: all 0.15s ease-in-out;
-      background-color: var(--light-pink);
+      background-color: var(--white);
     }
 
     svg {
-      font-size: inherit;
+      font-size: 2rem;
     }
 
     &:visited {
       color: inherit;
     }
     &:hover {
-      filter: brightness(115%);
+      filter: brightness(125%);
     }
   }
   button:hover {
-    filter: brightness(115%);
+    filter: brightness(125%);
   }
 
   &--dark {
     a {
       &:hover {
-        filter: brightness(115%);
+        filter: brightness(125%);
       }
     }
   }
 
-  &--small {
+  &--tiny {
     font-size: 1rem;
+  }
+  &--small {
   }
 
   &--medium {
-    font-size: 1.75rem;
-
     @media (max-width: 640px) {
       font-size: 1.25rem;
     }
   }
 
   &--large {
-    font-size: 2.5rem;
-
     @media (max-width: 640px) {
       font-size: 1.5rem;
     }
   }
 
   &--huge {
-    font-size: 5rem;
+    @media (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+  }
 
+  &--way-huge {
+    font-size: 8rem;
+    @media (max-width: 1250px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 1120px) {
+      font-size: 6rem;
+    }
+    @media (max-width: 990px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 640px) {
+      font-size: 2.5rem;
+    }
+  }
+  &--massive {
+    font-size: 14rem;
+    @media (max-width: 1250px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 1120px) {
+      font-size: 6rem;
+    }
+    @media (max-width: 990px) {
+      font-size: 5rem;
+    }
     @media (max-width: 640px) {
       font-size: 2.5rem;
     }
@@ -91,16 +118,16 @@
     font-weight: 900;
   }
 
-  &--light-pink {
-    color: var(--light-pink);
+  &--white {
+    color: var(--white);
   }
 
   &--blue {
-    color: var(--blue);
+    color: var(--secondary);
   }
 
   &--pink {
-    color: var(--pink);
+    color: var(--primary);
   }
 
   &--center {

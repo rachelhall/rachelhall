@@ -6,9 +6,17 @@ import { IconType } from "react-icons";
 interface IProps {
   children?: JSX.Element | string;
   className?: string;
-  color?: "pink" | "light-pink" | "blue" | "dark";
+  color?: "pink" | "white" | "blue" | "dark";
   external?: boolean;
-  fontSize?: "small" | "medium" | "large" | "huge";
+  fontSize?:
+    | "tiny"
+    | "body"
+    | "small"
+    | "medium"
+    | "large"
+    | "huge"
+    | "way-huge"
+    | "massive";
   fontWeight?: "light" | "regular" | "bold";
   uppercase?: boolean;
   textAlign?: "left" | "center" | "right";
@@ -24,7 +32,7 @@ export const Text: React.FC<IProps> = ({
   className,
   color,
   external = true,
-  fontSize = "medium",
+  fontSize = "body",
   fontWeight = "regular",
   italic = false,
   leadingIcon: LeadingIcon,
@@ -36,16 +44,19 @@ export const Text: React.FC<IProps> = ({
 }) => {
   const mainClass = cx(
     {
+      "text--tiny": fontSize === "tiny",
       "text--small": fontSize === "small",
       "text--medium": fontSize === "medium",
       "text--large": fontSize === "large",
       "text--huge": fontSize === "huge",
+      "text--way-huge": fontSize === "way-huge",
+      "text--massive": fontSize === "massive",
       "text--uppercase": uppercase,
       "text--spacing-small": verticalSpacing === "small",
       "text--spacing-large": verticalSpacing === "large",
       "text--light": fontWeight === "light",
       "text--bold": fontWeight === "bold",
-      "text--light-pink": color === "light-pink",
+      "text--white": color === "white",
       "text--blue": color === "blue",
       "text--pink": color === "pink",
       "text--dark": color === "dark",
@@ -56,32 +67,44 @@ export const Text: React.FC<IProps> = ({
   );
 
   const getTextElement = () => {
-    if (onClick) {
-      return (
-        <button onClick={onClick} className={mainClass}>
-          {children}
-        </button>
-      );
+    if (
+      fontSize === "huge" ||
+      fontSize === "way-huge" ||
+      fontSize === "massive"
+    ) {
+      return <h1 className={mainClass}>{children}</h1>;
     }
-
-    if (url) {
-      return (
-        <a
-          className={mainClass}
-          href={url}
-          target={external ? "_blank" : "_self"}
-          rel="noopener noreferrer"
-        >
-          {children}
-        </a>
-      );
+    if (fontSize === "large") {
+      return <h2 className={mainClass}>{children}</h2>;
+    }
+    if (fontSize === "medium") {
+      return <h3 className={mainClass}>{children}</h3>;
+    }
+    if (fontSize === "small") {
+      return <h4 className={mainClass}>{children}</h4>;
     } else return <p className={mainClass}>{children}</p>;
   };
 
   return (
     <div className="text">
       {LeadingIcon && <LeadingIcon className={mainClass} />}
-      {getTextElement()}
+
+      {onClick ? (
+        <button onClick={onClick} className={mainClass}>
+          {getTextElement()}
+        </button>
+      ) : url ? (
+        <a
+          className={mainClass}
+          href={url}
+          target={external ? "_blank" : "_self"}
+          rel="noopener noreferrer"
+        >
+          {getTextElement()}
+        </a>
+      ) : (
+        getTextElement()
+      )}
     </div>
   );
 };
