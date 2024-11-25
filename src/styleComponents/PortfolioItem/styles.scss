@@ -36,9 +36,9 @@
 
 .portfolioItem--thumbnail:hover {
   box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.51);
-  background-color: var(--accent);
+  background-color: var(--secondary);
   color: var(--white);
-  border: 0.5rem solid var(--primary);
+  border: 0.5rem solid var(--secondary);
 }
 
 .portfolioItem--image {
