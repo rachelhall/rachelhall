@@ -19,7 +19,7 @@ export const Bio: React.FC<IProps> = (props) => {
       <Text>
         I’m passionate about writing well-organized, maintainable code and enjoy
         using tools like GraphQL and React Query to create scalable applications
-        with seamless user experiences.{" "}
+        with seamless user experiences.
       </Text>
       <Text>
         Outside of work, you’ll find me recording music with friends or

@@ -1,4 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {
+  // useEffect,
+  useState,
+} from "react";
 
 import Toggle from "../../styleComponents/Toggle";
 import { CiSun } from "react-icons/ci";
@@ -13,7 +16,7 @@ export const ThemeSwitch: React.FC<IProps> = (props) => {
 
   const [isDark, setIsDark] = useState(false);
 
-  const systemPrefersDark = window.matchMedia("prefers-color-scheme: dark");
+  // const systemPrefersDark = window.matchMedia("prefers-color-scheme: dark");
 
   // useEffect(() => {
   //   if (systemPrefersDark) {

@@ -1,7 +1,6 @@
 import React from "react";
 import { BsCodeSquare, BsFileEarmarkMusic } from "react-icons/bs";
 import { GiHollowCat, GiRollerSkate } from "react-icons/gi";
-import { GoArrowUpRight } from "react-icons/go";
 
 import { Text } from "../../styleComponents";
 
@@ -31,7 +30,6 @@ export const Links: React.FC<IProps> = (props) => {
         fontSize="small"
         uppercase
         external={false}
-        // trailingIcon={GoArrowUpRight}
       >
         Software Developer
       </Text>
@@ -42,7 +40,6 @@ export const Links: React.FC<IProps> = (props) => {
         uppercase
         external={true}
         url="https://www.mariela.band"
-        // trailingIcon={GoArrowUpRight}
         className="links--item"
       >
         Musician
@@ -53,7 +50,6 @@ export const Links: React.FC<IProps> = (props) => {
         uppercase
         external={true}
         url="https://www.mariela.band"
-        // trailingIcon={GoArrowUpRight}
       >
         Rollerblader
       </Text>
@@ -64,8 +60,6 @@ export const Links: React.FC<IProps> = (props) => {
           leadingIcon={GiHollowCat}
           fontSize="small"
           uppercase
-
-          // trailingIcon={GoArrowUpRight}
         >
           Cat Mom
         </Text>

@@ -1,7 +1,3 @@
-import { Text } from "../../styleComponents/Text";
-import rachel from "../../media/rachel-2.png";
-import { Avatar } from "../../styleComponents/Avatar";
-
 import { Contact } from "../Contact";
 
 import "./styles.scss";
@@ -16,6 +12,7 @@ export const Header: React.FC = () => {
     <header className="header" id="header">
       <Greeting />
       <About />
+      <Contact />
     </header>
   );
 };
