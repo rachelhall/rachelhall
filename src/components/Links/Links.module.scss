@@ -1,0 +1,15 @@
+.Links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  svg {
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-right: 1rem;
+  }
+}
+
+.links--item {
+  width: 100%;
+}

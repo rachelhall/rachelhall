@@ -5,10 +5,7 @@
 }
 
 .closeButton {
-  background: conic-gradient(
-    var(--white-hover) var(--percentage),
-    var(--primary) 0
-  );
+  background: conic-gradient(var(--white) var(--percentage), var(--tertiary) 0);
   aspect-ratio: 1;
   display: flex;
   border: none;
@@ -30,7 +27,7 @@
     position: absolute;
     inset: 4px;
     border-radius: inherit;
-    background: var(--primary);
+    background: var(--tertiary);
   }
   svg {
     z-index: 11;
@@ -39,7 +36,7 @@
   &:hover {
     --percentage: 100%;
     svg {
-      color: var(--white-hover);
+      color: var(--white);
     }
   }
 

@@ -1,0 +1,80 @@
+.Toggle {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggleSwitch {
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    position: relative;
+    width: 2.75rem;
+    display: inline-block;
+    text-align: left;
+  }
+}
+.checkbox {
+}
+
+.label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+}
+.inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.inner:before,
+.inner:after {
+  float: left;
+  width: 50%;
+  height: 1.5rem;
+  padding: 0;
+  line-height: 36px;
+  color: var;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.inner:before {
+  content: "";
+  padding-left: 10px;
+  background: linear-gradient(45deg, var(--primary), var(--tertiary));
+  color: #fff;
+}
+.inner:after {
+  content: "";
+  padding-right: 10px;
+  background: linear-gradient(45deg, var(--tertiary), var(--secondary));
+  color: #fff;
+  text-align: right;
+}
+
+.switch {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 20px;
+  border: 0 solid #bbb;
+  border-radius: 16px;
+  transition: all 0.3s ease-in 0s;
+}
+.checkbox:checked + .label .inner {
+  margin-left: 0;
+}
+.checkbox:checked + .label .switch {
+  right: 0px;
+}

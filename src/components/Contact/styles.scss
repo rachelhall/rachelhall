@@ -6,8 +6,9 @@
   height: 7rem;
   width: 22rem;
   border-radius: 31% 79% 31% 75%/69% 78% 55% 65%;
-  border: 20px solid var(--primary);
-  background-color: var(--secondary);
+  border: 0.5rem solid var(--primary);
+  // background: linear-gradient(var(--secondary), var(--tertiary));
+  background-color: var(--tertiary);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -36,7 +37,6 @@
   @media (max-width: 640px) {
     border-radius: 31% 79% 31% 75%/95% 78% 55% 65%;
     max-width: 21rem;
-    border: 12px solid var(--primary);
   }
 
   &--list-item {
