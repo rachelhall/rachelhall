@@ -8,12 +8,9 @@ interface IProps {
   onChange: () => void;
 }
 
-export const Toggle: React.FC<IProps> = ({
-  isChecked,
-  label,
-  onChange,
-  ...props
-}) => {
+export const Toggle: React.FC<IProps> = (props) => {
+  const { isChecked, label, onChange } = props;
+
   return (
     <div className={styles.Toggle}>
       <div className={styles.toggleSwitch}>
@@ -24,12 +21,11 @@ export const Toggle: React.FC<IProps> = ({
           id={label}
           checked={isChecked}
           onChange={onChange}
-          {...props}
         />
-        {/* <label className={styles.label} htmlFor={label}>
+        <label className={styles.label} htmlFor={label}>
           <span className={styles.inner} />
           <span className={styles.switch} role="checkbox" />
-        </label> */}
+        </label>
       </div>
     </div>
   );

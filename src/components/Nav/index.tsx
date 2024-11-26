@@ -15,7 +15,7 @@ interface IProps {
 export const Nav: React.FC<IProps> = ({ pages }) => {
   return (
     <div className="nav">
-      {/* <ThemeSwitch /> */}
+      <ThemeSwitch />
       <ul className="nav--list">
         {pages.map((page) => (
           <li className="nav--item" key={page.url}>

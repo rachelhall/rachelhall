@@ -25,6 +25,7 @@ export const ThemeSwitch: React.FC<IProps> = (props) => {
     <div className={styles.ThemeSwitch}>
       <CiSun />
       <Toggle
+        label="Toggle"
         isChecked={isDark}
         onChange={() => setIsDark((prevState) => !prevState)}
       />
