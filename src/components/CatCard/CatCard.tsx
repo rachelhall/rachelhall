@@ -14,7 +14,9 @@ export const CatCard: React.FC<ICatProps> = ({ image, title }) => {
         height="250"
         alt="Brown striped tabby"
       />
-      <Text>{title}</Text>
+      <Text color="dark" fontWeight="bold">
+        {title}
+      </Text>
     </div>
   );
 };

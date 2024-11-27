@@ -26,6 +26,7 @@
 }
 
 .portfolioItem--thumbnail {
+  overflow-y: scroll;
   height: 285px;
   box-shadow: 4px 6px 5px 0px rgba(0, 0, 0, 0.21);
   border-radius: 14px;
@@ -40,6 +41,10 @@
   gap: 1rem;
   align-items: center;
   cursor: pointer;
+
+  @media (max-width: 640px) {
+    width: unset;
+  }
 
   & > div {
     width: 100%;

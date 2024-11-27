@@ -157,4 +157,10 @@
   &--italic {
     font-style: italic;
   }
+
+  &--leading-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-right: 1rem;
+  }
 }

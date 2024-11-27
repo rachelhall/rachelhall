@@ -43,7 +43,7 @@
 .inner:before {
   content: "";
   padding-left: 10px;
-  background: linear-gradient(45deg, var(--primary), var(--tertiary));
+  background: linear-gradient(45deg, var(--secondary), var(--tertiary));
   color: #fff;
 }
 .inner:after {

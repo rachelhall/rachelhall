@@ -90,7 +90,7 @@ export const Text: React.FC<IProps> = ({
 
   return (
     <div className="text">
-      {LeadingIcon && <LeadingIcon className={mainClass} />}
+      {LeadingIcon && <LeadingIcon className={"text--leading-icon"} />}
 
       {onClick ? (
         <button onClick={onClick} className={mainClass}>

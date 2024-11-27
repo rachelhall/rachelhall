@@ -1,4 +1,5 @@
 import React, {
+  useEffect,
   // useEffect,
   useState,
 } from "react";
@@ -8,29 +9,30 @@ import { CiSun } from "react-icons/ci";
 import { IoMoonOutline } from "react-icons/io5";
 
 import styles from "./ThemeSwitch.module.scss";
+import { useTheme } from "../../context/ThemeContext";
 
 interface IProps {}
 
 export const ThemeSwitch: React.FC<IProps> = (props) => {
   const {} = props;
 
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-  // const systemPrefersDark = window.matchMedia("prefers-color-scheme: dark");
-
-  // useEffect(() => {
-  //   if (systemPrefersDark) {
-  //     setIsDark(true);
-  //   }
-  // }, [systemPrefersDark]);
+  const handleChange = () => {
+    if (theme === "dark") {
+      setTheme("light");
+    } else {
+      setTheme("dark");
+    }
+  };
 
   return (
     <div className={styles.ThemeSwitch}>
       <CiSun />
       <Toggle
         label="Toggle"
-        isChecked={isDark}
-        onChange={() => setIsDark((prevState) => !prevState)}
+        isChecked={theme === "dark"}
+        onChange={handleChange}
       />
       <IoMoonOutline />
     </div>

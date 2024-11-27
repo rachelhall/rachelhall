@@ -1,5 +1,3 @@
-import { Contact } from "../Contact";
-
 import "./styles.scss";
 
 import React from "react";
@@ -12,7 +10,6 @@ export const Header: React.FC = () => {
     <header className="header" id="header">
       <Greeting />
       <About />
-      <Contact />
     </header>
   );
 };
