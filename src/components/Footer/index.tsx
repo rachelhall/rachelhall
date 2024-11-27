@@ -19,6 +19,7 @@ export const Footer: React.FC<IProps> = (props) => {
           251-472-5419
         </Text>
         <Text
+          className={styles.email}
           external={true}
           url="mailto:rachelraspberrypie@gmail.com?subject=I%20visited%20your%20portfolio%20today"
           leadingIcon={AiOutlineMail}
