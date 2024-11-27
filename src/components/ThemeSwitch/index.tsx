@@ -1,8 +1,4 @@
-import React, {
-  useEffect,
-  // useEffect,
-  useState,
-} from "react";
+import React from "react";
 
 import Toggle from "../../styleComponents/Toggle";
 import { CiSun } from "react-icons/ci";
