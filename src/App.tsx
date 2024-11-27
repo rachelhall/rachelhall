@@ -1,15 +1,15 @@
 import "./styles/global.scss";
 
-import { Header } from "./components/Header";
-import { Portfolio } from "./components/Portfolio";
+import { ThemeProvider } from "./context/ThemeContext";
+
+import Main from "./components/Main";
 
 function App() {
   return (
     <div className="App">
-      <main>
-        <Header />
-        <Portfolio />
-      </main>
+      <ThemeProvider>
+        <Main />
+      </ThemeProvider>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export const ModalHeader: React.FC<IProps> = ({ handleModal, title, url }) => {
   return (
     <div className="modalHeader">
       <CloseButton handleClose={handleModal} />
-      <Text url={url} fontSize="large" fontWeight="bold">
+      <Text color="light" url={url} fontSize="large" fontWeight="bold">
         {title}
       </Text>
     </div>

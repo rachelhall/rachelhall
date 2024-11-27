@@ -1,16 +1,17 @@
-.avatar--container {
-  height: 28rem;
-  width: 30rem;
-  overflow: hidden;
-  transform: translateY(9rem) translateX(-2rem);
-
-  @media (max-width: 1120px) {
-    transform: translateY(5rem) translateX(0);
-  }
+.avatar {
+  transform: translateX(0);
 
   @media (max-width: 640px) {
-    display: none;
+    // display: none;
   }
+}
+
+.avatar-img {
+  width: 25rem;
+  @media (max-width: 640px) {
+    width: 20rem;
+  }
+  // transform: translate(10px, 35px);
 }
 
 .avatar--background {
@@ -19,33 +20,40 @@
   width: 30rem;
   position: absolute;
   bottom: 0;
+  @media (max-width: 640px) {
+    width: 25rem;
+  }
 }
 
 .avatar--inner {
   border-radius: 84% 38% 70% 43% / 55% 74% 59% 71%;
-  background-color: var(--secondary);
+  background: linear-gradient(var(--secondary), var(--tertiary));
   border: 20px solid var(--primary);
   height: 15rem;
-  width: 25rem;
+  width: 23rem;
   overflow: hidden;
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   z-index: -1;
+
+  @media (max-width: 640px) {
+    width: 18rem;
+    height: 10rem;
+  }
 }
 
 .avatar--inner.c2 {
   border-radius: 84% 38% 70% 43% / 55% 74% 59% 71%;
-  background-color: transparent;
+  background: transparent;
   border-left: 20px solid var(--primary);
   border-right: 20px solid var(--primary);
   border-bottom: 20px solid var(--primary);
   border-top: 20px solid transparent;
   height: 15rem;
-  width: 25rem;
+  width: 23rem;
   z-index: 1;
-}
-
-.avatar {
-  width: 25rem;
-  transform: translate(10px, 35px);
+  @media (max-width: 640px) {
+    width: 18rem;
+    height: 10rem;
+  }
 }

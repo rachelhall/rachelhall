@@ -28,23 +28,35 @@
       color: inherit;
     }
     &:hover {
-      filter: brightness(125%);
+      @media (prefers-color-scheme: light) {
+        filter: brightness(150%);
+      }
+      @media (prefers-color-scheme: dark) {
+        filter: brightness(85%);
+      }
     }
   }
   button:hover {
-    filter: brightness(125%);
+    @media (prefers-color-scheme: light) {
+      filter: brightness(150%);
+    }
+    @media (prefers-color-scheme: dark) {
+      filter: brightness(85%);
+    }
   }
 
   &--dark {
     a {
       &:hover {
-        filter: brightness(125%);
+        @media (prefers-color-scheme: light) {
+          filter: brightness(150%);
+        }
       }
     }
   }
 
   &--tiny {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   &--small {
   }
@@ -118,16 +130,24 @@
     font-weight: 900;
   }
 
-  &--white {
-    color: var(--white);
+  &--primary {
+    color: var(--text-primary);
   }
 
-  &--blue {
-    color: var(--secondary);
+  &--secondary {
+    color: var(--text-secondary);
   }
 
-  &--pink {
-    color: var(--primary);
+  &--tertiary {
+    color: var(--text-tertiary);
+  }
+
+  &--color-light {
+    color: var(--text-light);
+  }
+
+  &--color-dark {
+    color: var(--text-dark);
   }
 
   &--center {
@@ -136,5 +156,11 @@
 
   &--italic {
     font-style: italic;
+  }
+
+  &--leading-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-right: 1rem;
   }
 }

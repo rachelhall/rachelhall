@@ -8,7 +8,7 @@ export const Portfolio: React.FC = () => {
   return (
     <div id="portfolio" className="portfolio">
       <Text uppercase fontSize="medium" fontWeight="bold">
-        Work History
+        Select Work History
       </Text>
       <div className="portfolio--items">
         {portfolioData.map((item) => (
