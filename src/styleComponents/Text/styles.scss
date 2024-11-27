@@ -122,11 +122,15 @@
     margin: 4rem 0;
   }
 
-  &--light {
+  &--weight-light {
     font-weight: 200;
   }
 
-  &--bold {
+  &--weight-medium {
+    font-weight: 700;
+  }
+
+  &--weight-bold {
     font-weight: 900;
   }
 

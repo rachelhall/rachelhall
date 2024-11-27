@@ -17,7 +17,7 @@ interface IProps {
     | "huge"
     | "way-huge"
     | "massive";
-  fontWeight?: "light" | "regular" | "bold";
+  fontWeight?: "light" | "regular" | "medium" | "bold";
   uppercase?: boolean;
   textAlign?: "left" | "center" | "right";
   verticalSpacing?: "small" | "large";
@@ -56,8 +56,9 @@ export const Text: React.FC<IProps> = ({
       "text--uppercase": uppercase,
       "text--spacing-small": verticalSpacing === "small",
       "text--spacing-large": verticalSpacing === "large",
-      "text--light": fontWeight === "light",
-      "text--bold": fontWeight === "bold",
+      "text--weight-light": fontWeight === "light",
+      "text--weight-medium": fontWeight === "medium",
+      "text--weight-bold": fontWeight === "bold",
       "text--primary": color === "primary",
       "text--secondary": color === "secondary",
       "text--tertiary": color === "tertiary",

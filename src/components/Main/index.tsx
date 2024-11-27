@@ -8,6 +8,7 @@ import { pages } from "../../pages";
 import { useTheme } from "../../context/ThemeContext";
 
 import cx from "classnames";
+import Footer from "../Footer";
 
 interface IProps {}
 
@@ -23,6 +24,7 @@ export const Main: React.FC<IProps> = (props) => {
       <Nav pages={pages} />
       <Header />
       <Portfolio />
+      <Footer />
     </main>
   );
 };

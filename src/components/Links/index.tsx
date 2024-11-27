@@ -1,6 +1,7 @@
 import React from "react";
 import { BsCodeSquare, BsFileEarmarkMusic } from "react-icons/bs";
 import { GiHollowCat, GiRollerSkate } from "react-icons/gi";
+import { AiOutlineMail } from "react-icons/ai";
 
 import { Text } from "../../styleComponents";
 
@@ -64,6 +65,15 @@ export const Links: React.FC<IProps> = (props) => {
           Cat Mom
         </Text>
       </div>
+      <Text
+        url="#contact"
+        leadingIcon={AiOutlineMail}
+        fontSize="small"
+        uppercase
+        external={false}
+      >
+        Contact
+      </Text>
       {modal}
     </div>
   );
