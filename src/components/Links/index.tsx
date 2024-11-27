@@ -50,7 +50,7 @@ export const Links: React.FC<IProps> = (props) => {
         fontSize="small"
         uppercase
         external={true}
-        url="https://www.mariela.band"
+        url="https://www.instagram.com/grindylocks/"
       >
         Rollerblader
       </Text>
