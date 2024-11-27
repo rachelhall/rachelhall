@@ -14,7 +14,9 @@ export const ThemeContext = createContext<TThemeContext>({
 });
 
 export const ThemeProvider = ({ children }: IProps) => {
-  const systemPrefersDark = window.matchMedia("prefers-color-scheme: dark");
+  const systemPrefersDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
 
   const [theme, setTheme] = useState<TTheme>(
     systemPrefersDark ? "dark" : "light"
