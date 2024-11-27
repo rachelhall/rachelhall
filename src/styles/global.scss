@@ -2,21 +2,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
-  --accent: #9ec0f0;
-  --secondary-accent: #ed2b43;
-  --dark: #334a6a;
-  --primary: #1255b3;
-  --secondary: #1a63c9;
-  --dark-hover: #083c85;
-  --white: #f7f7f8;
+  --text-light: #f0edff;
+  --text-dark: #4d3479;
 
-  // --purple: #cdb4db;
-  // --white-hover: #fafbf9;
-  // --accent: #eb5c6f;
-  // --pink: #e2344b;
-  // --light-blue: #bde0fe;
-  // --blue: #3c91e6;
+  // @media (prefers-color-scheme: light) {
+  //   --background: #f0edff;
+  //   --background-secondary: #715fd4;
+  //   --background-hover: #4d3479;
+
+  //   --border: #d1d1d1;
+
+  //   --text-primary: #4d3479;
+  //   --text-secondary: #f0edff;
+  //   --text-tertiary: #715fd4;
+
+  //   --accent: #f0edff;
+  //   --primary: #4d3479;
+  //   --secondary: #c16eeb;
+  //   --tertiary: #715fd4;
+  //   --white: #f0edff;
+  //   --bright-white: #f8f8f8;
+  // }
+  // @media (prefers-color-scheme: dark) {
+  //   --background: #4d3479;
+  //   --background-secondary: #715fd4;
+  //   --background-hover: #4d3479;
+
+  //   --border: #d1d1d1;
+
+  //   --text-primary: #f0edff;
+  //   --text-secondary: #4d3479;
+  //   --text-tertiary: #715fd4;
+
+  //   --accent: #f0edff;
+  //   --primary: #f8f8f8;
+  //   --secondary: #c16eeb;
+  //   --tertiary: #715fd4;
+  //   --white: #f0edff;
+  //   --bright-white: #f8f8f8;
+  // }
 }
+
+.light {
+  --background: #f0edff;
+  --background-secondary: #715fd4;
+  --background-hover: #4d3479;
+
+  --border: #d1d1d1;
+
+  --text-primary: #4d3479;
+  --text-secondary: #f0edff;
+  --text-tertiary: #715fd4;
+
+  --accent: #f0edff;
+  --primary: #4d3479;
+  --secondary: #c16eeb;
+  --tertiary: #715fd4;
+  --white: #f0edff;
+  --bright-white: #f8f8f8;
+}
+
+.dark {
+  --background: #4d3479;
+  --background-secondary: #715fd4;
+  --background-hover: #4d3479;
+
+  --border: #d1d1d1;
+
+  --text-primary: #f0edff;
+  --text-secondary: #4d3479;
+  --text-tertiary: #715fd4;
+
+  --accent: #f0edff;
+  --primary: #f8f8f8;
+  --secondary: #c16eeb;
+  --tertiary: #715fd4;
+  --white: #f0edff;
+  --bright-white: #f8f8f8;
+}
+
 #root {
   width: 100vw;
 }
@@ -25,16 +89,24 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  padding: 0;
+  height: 100%;
+}
+
 body {
   font-family: "aktiv-grotesk", "space-grotesk", "Roboto", "SF Pro Text",
     "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  color: var(--primary);
-  background-color: var(--white);
   margin: 0;
+  height: 100%;
 
   @media (max-width: 640px) {
     padding: 0;
   }
+}
+
+.App {
+  height: 100%;
 }
 
 button {

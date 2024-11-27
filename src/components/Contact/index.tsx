@@ -11,7 +11,7 @@ export const Contact: React.FC = () => {
       <div className="contact--content">
         <Link url="tel:251-472-5419" animation={false}>
           <Text
-            color="white"
+            color="primary"
             fontWeight="bold"
             fontSize="tiny"
             leadingIcon={FiPhone}
@@ -29,7 +29,7 @@ export const Contact: React.FC = () => {
             external={true}
             url="mailto:rachelraspberrypie@gmail.com?subject=I%20visited%20your%20portfolio%20today"
             leadingIcon={AiOutlineMail}
-            color="white"
+            color="primary"
             fontSize="tiny"
             fontWeight="bold"
           >

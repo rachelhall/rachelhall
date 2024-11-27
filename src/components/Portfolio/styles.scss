@@ -5,14 +5,15 @@
   align-items: center;
   justify-content: center;
   padding: 1rem 1rem 2rem 1rem;
-  gap: 2rem;
+  gap: 4rem;
+  margin: 4rem 0;
   &--items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 
     @media (max-width: 640px) {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Text } from "../../styleComponents/Text";
+import ThemeSwitch from "../ThemeSwitch";
 
 import "./styles.scss";
 
@@ -13,14 +14,17 @@ interface IProps {
 
 export const Nav: React.FC<IProps> = ({ pages }) => {
   return (
-    <ul className="nav--list">
-      {pages.map((page) => (
-        <li className="nav--item" key={page.url}>
-          <Text fontWeight="bold" url={page.url} external={true}>
-            {page.title}
-          </Text>
-        </li>
-      ))}
-    </ul>
+    <div className="nav">
+      <ThemeSwitch />
+      <ul className="nav--list">
+        {pages.map((page) => (
+          <li className="nav--item" key={page.url}>
+            <Text fontWeight="bold" url={page.url} external={true}>
+              {page.title}
+            </Text>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };

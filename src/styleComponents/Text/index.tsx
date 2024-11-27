@@ -6,7 +6,7 @@ import { IconType } from "react-icons";
 interface IProps {
   children?: JSX.Element | string;
   className?: string;
-  color?: "pink" | "white" | "blue" | "dark";
+  color?: "primary" | "secondary" | "tertiary" | "light" | "dark";
   external?: boolean;
   fontSize?:
     | "tiny"
@@ -17,25 +17,27 @@ interface IProps {
     | "huge"
     | "way-huge"
     | "massive";
-  fontWeight?: "light" | "regular" | "bold";
+  fontWeight?: "light" | "regular" | "medium" | "bold";
   uppercase?: boolean;
   textAlign?: "left" | "center" | "right";
   verticalSpacing?: "small" | "large";
   italic?: boolean;
   url?: string;
   leadingIcon?: IconType;
+  trailingIcon?: IconType;
   onClick?: () => void;
 }
 
 export const Text: React.FC<IProps> = ({
   children,
   className,
-  color,
+  color = "primary",
   external = true,
   fontSize = "body",
   fontWeight = "regular",
   italic = false,
   leadingIcon: LeadingIcon,
+  trailingIcon: TrailingIcon,
   uppercase = false,
   textAlign,
   verticalSpacing,
@@ -54,12 +56,14 @@ export const Text: React.FC<IProps> = ({
       "text--uppercase": uppercase,
       "text--spacing-small": verticalSpacing === "small",
       "text--spacing-large": verticalSpacing === "large",
-      "text--light": fontWeight === "light",
-      "text--bold": fontWeight === "bold",
-      "text--white": color === "white",
-      "text--blue": color === "blue",
-      "text--pink": color === "pink",
-      "text--dark": color === "dark",
+      "text--weight-light": fontWeight === "light",
+      "text--weight-medium": fontWeight === "medium",
+      "text--weight-bold": fontWeight === "bold",
+      "text--primary": color === "primary",
+      "text--secondary": color === "secondary",
+      "text--tertiary": color === "tertiary",
+      "text--color-light": color === "light",
+      "text--color-dark": color === "dark",
       "text--center": textAlign === "center",
       "text--italic": italic === true,
     },
@@ -87,7 +91,7 @@ export const Text: React.FC<IProps> = ({
 
   return (
     <div className="text">
-      {LeadingIcon && <LeadingIcon className={mainClass} />}
+      {LeadingIcon && <LeadingIcon className={"text--leading-icon"} />}
 
       {onClick ? (
         <button onClick={onClick} className={mainClass}>
@@ -104,6 +108,9 @@ export const Text: React.FC<IProps> = ({
         </a>
       ) : (
         getTextElement()
+      )}
+      {TrailingIcon && (
+        <TrailingIcon className={cx(mainClass, "text--trailingIcon")} />
       )}
     </div>
   );
