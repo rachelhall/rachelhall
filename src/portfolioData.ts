@@ -10,6 +10,7 @@ export enum ECodeTool {
   GRAPHQL = "Graphql",
   PYTHON = "Python",
   VUE = "Vue",
+  FIREBASE = "Firebase",
 }
 
 export interface IBulletPoint {
@@ -27,6 +28,46 @@ export interface IPortfolioItem {
 }
 
 export const portfolioData: IPortfolioItem[] = [
+  {
+    title: "Queue Dating App",
+    mainImage: "",
+    url: "https://queuedatingapp.com/",
+    description:
+      "Queue is a platform that empowers users to forge deeper and more authentic connections through a unique communication model resulting in an unparalleled user experience.",
+    bulletPoints: [
+      {
+        heading: "Core UI: ",
+        details:
+          "Built a styled component library to standardize UI elements and match Figma designs, using React Native and TypeScript, improving design consistency and reducing redundant code.",
+      },
+      {
+        heading: "Performance Optimization: ",
+        details:
+          "Optimized performance and API efficiency by refactoring list components from ScrollView to FlatList and implementing caching with TanStack Query, leading to faster load times and smoother interactions.",
+      },
+      {
+        heading: "Gesture Handling: ",
+        details:
+          "Redesigned profile swiping and engagement features, including dating app-style swiping, in-chat profile views, and a modal for liking/commenting on profile elements, using React Native, Reanimated, and Firebase, increasing user interaction.",
+      },
+      {
+        heading: "Messaging: ",
+        details:
+          "Enhanced chat experience with auto-populated conversation starters and an options menu for chat management, improving first-message engagement and user control.",
+      },
+      {
+        heading: "Authentication: ",
+        details:
+          "Streamlined navigation and authentication by refactoring app routes, improving login flows, and implementing component reset logic, using React Navigation, Firebase Auth, and React Context, ensuring a seamless user experience.",
+      },
+    ],
+    tools: [
+      ECodeTool.REACT_NATIVE,
+      ECodeTool.JAVASCRIPT,
+      ECodeTool.CSS,
+      ECodeTool.FIREBASE,
+    ],
+  },
   {
     title: "Founders Network",
     mainImage: "",
@@ -84,7 +125,7 @@ export const portfolioData: IPortfolioItem[] = [
       {
         heading: "Developed Full-stack Solutions: ",
         details:
-          "Used Next.js and Python to create a weapons target assignment aid, enabling the US Military to operate at speed and scale with a focus on asset target pairing and threat detction.",
+          "Used Next.js and Python to create a weapons target assignment aid, enabling the US Military to operate at speed and scale with a focus on asset target pairing and threat detection.",
       },
       {
         heading: "Analyzed client-provided data: ",

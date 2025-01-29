@@ -4,6 +4,7 @@ import { GrGraphQl } from "react-icons/gr";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaPython, FaVuejs } from "react-icons/fa";
 import { ECodeTool } from "../../portfolioData";
+import { IoLogoFirebase } from "react-icons/io5";
 
 import cx from "classnames";
 
@@ -43,6 +44,8 @@ export const Technologies: React.FC<IProps> = (props) => {
         return <FaPython fontSize="2.5rem" key={`k-${tool}`} />;
       case ECodeTool.VUE:
         return <FaVuejs fontSize="2.5rem" key={`k-${tool}`} />;
+      case ECodeTool.FIREBASE:
+        return <IoLogoFirebase fontSize="2.5rem" key={`k-${tool}`} />;
     }
   };
 
