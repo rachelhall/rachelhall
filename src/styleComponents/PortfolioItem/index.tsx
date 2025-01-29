@@ -19,7 +19,9 @@ export const PortfolioItem: React.FC<IPortfolioItem> = ({
       <Technologies tools={tools} />
       <div className="portfolioItem--link">
         <div className="portfolioItem--text">
-          <Text color="dark">{description}</Text>
+          <Text fontWeight="medium" color="dark">
+            {description}
+          </Text>
           <ul className="portfolioItem--bulletpoint">
             {bulletPoints?.map((point) => (
               <li key={point.details}>
